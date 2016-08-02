@@ -5,7 +5,7 @@
 # Gem install colorize
 require 'colorize'
 
-version = 1.0
+version = 1.1
 
 template= File.new("#{File.expand_path('~')}/.environment_secrets", "r").read + "\n# New keys #{Time.now.strftime("%-l:%M %p, %-d %B %Y")}" || "# This file exists...\nexport ENVIRONMENT_SECRETS=true\n"
 
