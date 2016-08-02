@@ -42,7 +42,7 @@ continue = prompt("Does this look right? [Y/n]")
 if continue.to_s == "y" || continue.to_s == "Y"
   if File.write("#{File.expand_path('~')}/.environment_secrets", template)
     puts "👍  Updated successfully".green
-    exec( "nano +999 ~/.environment_secrets" )
+    exec( "$EDITOR +999 ~/.environment_secrets" )
   else
     puts "👎  Couldn't update secrets".red
   end
